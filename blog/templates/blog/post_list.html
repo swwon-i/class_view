@@ -16,6 +16,10 @@
     </ul>
 
     <a href="{% url 'post_create' %}">Create New Post</a>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">로그아웃</button>
+    </form>
 
 </body>
 </html>
